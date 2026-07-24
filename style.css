@@ -1,0 +1,18 @@
+body{
+    margin: 0;
+    min-height: 100vh;
+}
+
+.container{
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+}
+
+.divHolder{
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
+}

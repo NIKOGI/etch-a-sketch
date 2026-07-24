@@ -10,8 +10,17 @@
     <div class="container">
 
     </div>
+
     <script>
-        
+    const container = document.querySelector(".container")
+    
+  
+    for(let i = 0; i < 16; i++)
+    {
+        const divs = document.createElement("div");
+        divs.classList.add("divHolder")
+        container.appendChild(divs);
+    }
     </script>
 </body>
 </html>
