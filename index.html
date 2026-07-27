@@ -7,13 +7,21 @@
     <title>etch-a-sketch</title>
 </head>
 <body>
+    
     <div class="container">
 
+        
+        <div class="buttonHolder">
+    
+            <button class="userButton">click me for new grid</button>
     </div>
+   
+
+   
 
     <script>
-    const container = document.querySelector(".container")
-   
+    const container = document.querySelector(".container");
+    const button = document.querySelector(".userButton");
 
     for(let i = 0; i < 256; i++)
     {
@@ -24,10 +32,23 @@
          divs.addEventListener("mouseover", e =>
     {
         divs.style.backgroundColor = "black";
-        console.log("hello");
     })
 
     }
+
+    button.addEventListener("click", e =>
+    {
+       let userInput = prompt("enter a number from 1 to 100.", "1");
+
+       if(userInput > 100 || userInput <= 0)
+       {
+         userInput = prompt("invalid number, enter a number from 1 to 100", "1");
+       }
+       else return;
+    }
+    )
+
+
 
    
      

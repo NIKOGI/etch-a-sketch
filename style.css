@@ -1,6 +1,6 @@
 body{
     display: flex;
-    margin-top: 120px;
+    
     justify-content: center;
 }
 
@@ -17,4 +17,21 @@ box-sizing: border-box;
 border: solid 1px black;
 height: calc(100% / 16);
 width: calc(100% / 16);
+}
+
+.userButton{
+display: flex;
+
+width: 100px;
+height: 50px;
+align-items: center;
+}
+
+.buttonHolder{
+display: flex;
+flex-wrap: wrap;
+width: 100%;
+justify-content: center;
+padding-bottom: 70px;
+padding-top: 70px;
 }
