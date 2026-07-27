@@ -9,14 +9,13 @@ display: flex;
 min-height: 600px;
 min-width: 600px;
 flex-wrap: wrap;
+box-sizing: border-box;
 }
 
 .divHolder{
 display: flex;
 box-sizing: border-box;
 border: solid 1px black;
-height: calc(100% / 16);
-width: calc(100% / 16);
 }
 
 .userButton{

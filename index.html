@@ -23,10 +23,20 @@
     const container = document.querySelector(".container");
     const button = document.querySelector(".userButton");
 
-    for(let i = 0; i < 256; i++)
+    function createGrid(size)
+    {
+    container.innerText = "";
+
+    let containerSize = size * size;
+
+    let percentageSize = (100 / size);
+
+    for(let i = 0; i < containerSize; i++)
     {
         const divs = document.createElement("div");
-        divs.classList.add("divHolder")
+        divs.classList.add("divHolder");
+
+        divs.style.width = `${percentageSize}%`;
         container.appendChild(divs);
         
          divs.addEventListener("mouseover", e =>
@@ -34,6 +44,7 @@
         divs.style.backgroundColor = "black";
     })
 
+    }
     }
 
     button.addEventListener("click", e =>
@@ -47,6 +58,8 @@
        else return;
     }
     )
+
+    createGrid(14);
 
 
 
