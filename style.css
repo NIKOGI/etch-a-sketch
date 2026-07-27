@@ -1,18 +1,20 @@
 body{
-    margin: 0;
-    min-height: 100vh;
+    display: flex;
+    margin-top: 120px;
+    justify-content: center;
 }
 
 .container{
-   display: flex;
-   flex-wrap: wrap;
-   flex-direction: row;
+display: flex;
+min-height: 600px;
+min-width: 600px;
+flex-wrap: wrap;
 }
 
 .divHolder{
-    display: flex;
-    flex-wrap: wrap;
-    border: 1px solid black;
-    width: 150px;
-    height: 150px;
+display: flex;
+box-sizing: border-box;
+border: solid 1px black;
+height: calc(100% / 16);
+width: calc(100% / 16);
 }

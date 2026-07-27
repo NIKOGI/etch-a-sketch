@@ -13,14 +13,27 @@
 
     <script>
     const container = document.querySelector(".container")
-    
-  
-    for(let i = 0; i < 16; i++)
+   
+
+    for(let i = 0; i < 256; i++)
     {
         const divs = document.createElement("div");
         divs.classList.add("divHolder")
         container.appendChild(divs);
+        
+         divs.addEventListener("mouseover", e =>
+    {
+        divs.style.backgroundColor = "black";
+        console.log("hello");
+    })
+
     }
+
+   
+     
+
+
+    
     </script>
 </body>
 </html>
