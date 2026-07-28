@@ -11,11 +11,12 @@
     <div class="container">
 
         
-        <div class="buttonHolder">
-    
-            <button class="userButton">click me for new grid</button>
+
     </div>
-   
+           
+    <div class="buttonHolder">
+    <button class="userButton">click me for new grid</button>
+    </div>
 
    
 
@@ -50,16 +51,22 @@
     button.addEventListener("click", e =>
     {
        let userInput = prompt("enter a number from 1 to 100.", "1");
+       
+       let returnValue = 0;
 
        if(userInput > 100 || userInput <= 0)
        {
          userInput = prompt("invalid number, enter a number from 1 to 100", "1");
+
+         returnValue = parseInt(userInput);
+
+         return createGrid(returnValue);
        }
-       else return;
+       else return createGrid(parseInt(userInput));
     }
     )
 
-    createGrid(14);
+    createGrid(16);
 
 
 
