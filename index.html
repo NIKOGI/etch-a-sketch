@@ -8,18 +8,18 @@
 </head>
 <body>
     
-    <div class="container">
+    <div class="wrapper">
+        <div class="buttonHolder">
+            <button class="userButton">click me for new grid</button>
+        </div>
+        <div class="container">  
+    
+    
+     </div>
 
-        
-
-    </div>
-           
-    <div class="buttonHolder">
-    <button class="userButton">click me for new grid</button>
-    </div>
-
-   
-
+    
+     </div>
+    
     <script>
     const container = document.querySelector(".container");
     const button = document.querySelector(".userButton");
@@ -28,19 +28,19 @@
     {
     container.innerText = "";
 
-    let containerSize = size * size;
+    let totalContainers = size * size;
 
-    let percentageSize = (100 / size);
+    let containerSize = 100 / size;
 
-    for(let i = 0; i < containerSize; i++)
+    for(let i = 0; i < totalContainers; i++)
     {
         const divs = document.createElement("div");
         divs.classList.add("divHolder");
 
-        divs.style.width = `${percentageSize}%`;
+        divs.style.flexBasis = `${containerSize}%`;
         container.appendChild(divs);
         
-         divs.addEventListener("mouseover", e =>
+    divs.addEventListener("mouseover", e =>
     {
         divs.style.backgroundColor = "black";
     })
